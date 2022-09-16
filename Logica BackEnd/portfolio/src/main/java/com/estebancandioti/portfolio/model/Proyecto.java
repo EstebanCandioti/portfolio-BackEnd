@@ -18,32 +18,32 @@ import lombok.Setter;
 @Setter
 //mapeo de la entidad y la tabla
 @Entity
-@Table(name="proyectos")
+@Table(name = "proyectos")
 
 public class Proyecto {
-    
+
     //Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idProyectos")
     private Long id;
 
-    @Column(name = "nombre_proyectos", length = 45)
+    @Column(name = "nombre_proyectos", length = 45, nullable = false)
     private String nombre;
 
-    @Column(name = "descripcion_proyectos", length = 200)
+    @Column(name = "descripcion_proyectos", length = 200, nullable = false)
     private String descripcion;
 
-    @Column(name = "fecha_inicio", length = 45)
+    @Column(name = "fecha_inicio", length = 45, nullable = false)
     private String inicioProyecto;
 
-    @Column(name = "fecha_finalizacion", length = 45)
+    @Column(name = "fecha_finalizacion", length = 45, nullable = false)
     private String finalizacionProyecto;
 
     @Column(name = "fotos_proyectos", length = 100)
     private String fotoProyecto;
-    
-    @Column(name = "link1", length = 100)
+
+    @Column(name = "link1", length = 100, nullable = false)
     private String link1;
 
     @Column(name = "descripcion_link1", length = 100)
@@ -51,7 +51,7 @@ public class Proyecto {
 
     @Column(name = "link2", length = 100)
     private String link2;
-    
+
     @Column(name = "descripcion_link2", length = 100)
     private String descripcionLink2;
 
@@ -60,14 +60,15 @@ public class Proyecto {
 
     @Column(name = "descripcion_link3", length = 100)
     private String descripcionLink3;
-    
-    @Column (name="id_persona")
+
+    @Column(name = "id_persona", nullable = false)
     private Long idPersona;
 
+    @Column(name = "posicionLista")
+    private int posicion;
 
     //Constructores
-
-    public Proyecto(Long id, String nombre, String descripcion, String inicioProyecto, String finalizacionProyecto, String fotoProyecto, String link1, String descripcionLink1, String link2, String descripcionLink2, String link3, String descripcionLink3, Long id_persona) {
+    public Proyecto(Long id, String nombre, String descripcion, String inicioProyecto, String finalizacionProyecto, String fotoProyecto, String link1, String descripcionLink1, String link2, String descripcionLink2, String link3, String descripcionLink3, Long idPersona, int posicion) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -80,7 +81,8 @@ public class Proyecto {
         this.descripcionLink2 = descripcionLink2;
         this.link3 = link3;
         this.descripcionLink3 = descripcionLink3;
-        this.idPersona = id_persona;
+        this.idPersona = idPersona;
+        this.posicion = posicion;
     }
 
     public Proyecto() {

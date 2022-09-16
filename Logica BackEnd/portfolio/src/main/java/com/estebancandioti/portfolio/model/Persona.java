@@ -26,24 +26,32 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "nombre", length = 45)
+    @Column(name = "nombre", length = 45, nullable=false)
     private String nombre;
 
-    @Column(name = "descripcionPersona", length = 200)
+    @Column(name = "descripcionPersona", length = 200, nullable=false)
     private String descripcion;
 
-    @Column (name="titulos", length= 150)
+    @Column (name="titulos", length= 200)
     private String titulos;
 
-    @Column(name = "email", length = 45)
+    @Column(name = "email", length = 45, nullable=false)
     private String email;
 
-    @Column(name = "ubicacion", length = 75)
+    @Column(name = "ubicacion", length = 75, nullable=false)
     private String ubicacion;
 
-    @Column(name = "contrasenia", length = 20)
+    @Column(name = "contrasenia", length = 20, nullable=false)
     private String contrasenia;
-
+    
+    @Column(name="url_foto_perfil", length=100, nullable=false )
+    private String fotoPerfil;
+    
+    @Column(name="url_foto_banner", length=100, nullable=false )
+    private String fotoBanner;
+    
+    
+    
     //Constructores
     public Persona() {
     }

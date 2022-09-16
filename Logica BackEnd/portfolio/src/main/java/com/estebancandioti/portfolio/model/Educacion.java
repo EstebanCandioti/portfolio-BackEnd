@@ -24,34 +24,39 @@ public class Educacion {
     @Column(name = "idEstudios")
     private Long id;
 
-    @Column(name = "nombre_instituciones", length = 100)
+    @Column(name = "nombre_instituciones", length = 100, nullable=false)
     private String institucion;
 
-    @Column(name = "titulos", length = 45)
+    @Column(name = "titulos", length = 45, nullable=false)
     private String titulo;
 
     @Column(name="fotoInstitucion", length=100)
     private String fotoInstitucion;
     
-    @Column(name = "fecha_inicio", length = 45)
+    @Column(name = "fecha_inicio", length = 45, nullable=false)
     private String inicioEducacion;
 
-    @Column(name = "fecha_finalizacion", length = 45)
+    @Column(name = "fecha_finalizacion", length = 45, nullable=false)
     private String finalizacionEducacion;
 
-    @Column (name="idPersona")
+    @Column (name="idPersona", nullable=false)
     private Long idPersona;
-
+    
+    @Column (name="posicionLista")
+    private int posicion;
     //Constructores
-    public Educacion(Long id, String institucion, String titulo, String fotoInstitucion, String inicioEducacion, String finalizacionEducacion, Long id_persona) {
+
+    public Educacion(Long id, String institucion, String titulo, String fotoInstitucion, String inicioEducacion, String finalizacionEducacion, Long idPersona, int posicion) {
         this.id = id;
         this.institucion = institucion;
         this.titulo = titulo;
         this.fotoInstitucion = fotoInstitucion;
         this.inicioEducacion = inicioEducacion;
         this.finalizacionEducacion = finalizacionEducacion;
-        this.idPersona = id_persona;
+        this.idPersona = idPersona;
+        this.posicion = posicion;
     }
+    
 
     public Educacion() {
     }

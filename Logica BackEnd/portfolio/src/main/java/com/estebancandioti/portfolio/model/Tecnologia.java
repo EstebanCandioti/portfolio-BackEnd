@@ -14,40 +14,47 @@ import lombok.Getter;
 import lombok.Setter;
 
 //getters y setters
-@Getter @Setter
+@Getter
+@Setter
 //Mapeo de la Entidad
 @Entity
-@Table(name="tecnologias")
+@Table(name = "tecnologias")
 public class Tecnologia {
-    
+
     //Atributos
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name="idTecnologias")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "idTecnologias")
     private Long id;
-    
-    @Column(name="nombre_tecnologia", length=45)
+
+    @Column(name = "nombre_tecnologia", length = 45, nullable = false)
     private String nombre;
-    
-    @Column (name="descripcion_tecnologias", length=200)
+
+    @Column(name = "descripcion_tecnologias", length = 200, nullable = false)
     private String descripcion;
-    
-    @Column (name="tecnologia_imagen", length=100)
+
+    @Column(name = "tecnologia_imagen", length = 100)
     private String tecnologiaImg;
-    
-    @Column (name="id_persona")
+
+    @Column(name = "id_persona", nullable = false)
     private Long idPersona;
+
+    @Column(name = "posicionLista")
+    private int posicion;
 
     //Constructores
     public Tecnologia() {
     }
 
-    public Tecnologia(Long id, String nombre, String descripcion, String urlFoto, Long id_persona) {
+    public Tecnologia(Long id, String nombre, String descripcion, String tecnologiaImg, Long idPersona, int posicion) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.tecnologiaImg = urlFoto;
-        this.idPersona = id_persona;
+        this.tecnologiaImg = tecnologiaImg;
+        this.idPersona = idPersona;
+        this.posicion = posicion;
     }
+    
+    
 
 }
