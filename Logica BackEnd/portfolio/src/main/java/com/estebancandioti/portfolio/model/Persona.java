@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.estebancandioti.portfolio.model;
 
 import javax.persistence.Column;
@@ -49,6 +45,15 @@ public class Persona {
     
     @Column(name="url_foto_banner", length=100, nullable=false )
     private String fotoBanner;
+    
+    @Column(name="instagram", length=30)
+    private String instagram;
+    
+    @Column(name="numeroTelefono", length=13)
+    private String numero;
+    
+    @Column(name="linkedin", length=30)
+    private String linkedin;
     
     
     
