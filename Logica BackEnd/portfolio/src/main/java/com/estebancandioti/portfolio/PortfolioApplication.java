@@ -12,6 +12,7 @@ public class PortfolioApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PortfolioApplication.class, args);
 	}
+    //cors
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
