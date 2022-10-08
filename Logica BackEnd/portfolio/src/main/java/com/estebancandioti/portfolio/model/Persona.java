@@ -29,7 +29,7 @@ public class Persona {
     @Column(name = "nombre", length = 45, nullable=false)
     private String nombre;
 
-    @Column(name = "descripcionPersona", length = 200, nullable=false)
+    @Column(name = "descripcion_persona", length = 200, nullable=false)
     private String descripcion;
 
     @Column (name="titulos", length= 200)
@@ -40,9 +40,6 @@ public class Persona {
 
     @Column(name = "ubicacion", length = 75, nullable=false)
     private String ubicacion;
-
-    @Column(name = "contrasenia", length = 20, nullable=false)
-    private String contrasenia;
     
     @Column(name="url_foto_perfil", length=100, nullable=false )
     private String fotoPerfil;
@@ -53,7 +50,7 @@ public class Persona {
     @Column(name="instagram", length=30)
     private String instagram;
     
-    @Column(name="numeroTelefono", length=13)
+    @Column(name="numero_telefono", length=13)
     private String numero;
     
     @Column(name="linkedin", length=30)

@@ -37,7 +37,7 @@ public class HabilidadFuerte {
     @Column (name="id_persona")
     private Long idPersona;
 
-            @Column(name = "posicionLista")
+            @Column(name = "posicion_lista")
     private int posicion;
     
     //Constuctores

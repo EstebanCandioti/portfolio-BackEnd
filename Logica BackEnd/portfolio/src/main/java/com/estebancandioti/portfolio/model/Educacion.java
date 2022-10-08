@@ -21,7 +21,7 @@ public class Educacion {
     //Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idEstudios")
+    @Column(name = "id_estudios")
     private Long id;
 
     @Column(name = "nombre_instituciones", length = 100, nullable=false)
@@ -30,7 +30,7 @@ public class Educacion {
     @Column(name = "titulos", length = 45, nullable=false)
     private String titulo;
 
-    @Column(name="fotoInstitucion", length=100)
+    @Column(name="foto_institucion", length=100)
     private String fotoInstitucion;
     
     @Column(name = "fecha_inicio", length = 45, nullable=false)
@@ -39,10 +39,10 @@ public class Educacion {
     @Column(name = "fecha_finalizacion", length = 45, nullable=false)
     private String finalizacionEducacion;
 
-    @Column (name="idPersona", nullable=false)
+    @Column (name="id_persona", nullable=false)
     private Long idPersona;
     
-    @Column (name="posicionLista")
+    @Column (name="posicion_lista")
     private int posicion;
     //Constructores
 

@@ -20,7 +20,7 @@ public class Experiencia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idTrabajos")
+    @Column(name = "id_trabajos")
     private Long id;
 
     @Column(name = "nombre_trabajo", length = 45, nullable = false)
@@ -44,8 +44,11 @@ public class Experiencia {
     @Column(name = "id_persona", nullable = false)
     private Long idPersona;
 
-    @Column(name = "posicionLista")
+    @Column(name = "posicion_lista")
     private int posicion;
+    
+    @Column(name="numero_referencia", length=13)
+    private String numeroReferencia;
 
     //constructioes
     public Experiencia(Long id, String nombreTrabajo, String posicionLaboral, String descripcionLaboral, String inicioTrabajo, String finalizacionTrabajo, String fotoTrabajo, Long idPersona, int posicion) {

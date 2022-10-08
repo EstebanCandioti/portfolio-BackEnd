@@ -25,7 +25,7 @@ public class Proyecto {
     //Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idProyectos")
+    @Column(name = "id_proyectos")
     private Long id;
 
     @Column(name = "nombre_proyectos", length = 45, nullable = false)

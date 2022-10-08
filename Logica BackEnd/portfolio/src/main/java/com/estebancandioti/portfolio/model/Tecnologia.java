@@ -24,7 +24,7 @@ public class Tecnologia {
     //Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idTecnologias")
+    @Column(name = "id_tecnologias")
     private Long id;
 
     @Column(name = "nombre_tecnologia", length = 45, nullable = false)
@@ -39,7 +39,7 @@ public class Tecnologia {
     @Column(name = "id_persona", nullable = false)
     private Long idPersona;
 
-    @Column(name = "posicionLista")
+    @Column(name = "posicion_lista")
     private int posicion;
 
     //Constructores
