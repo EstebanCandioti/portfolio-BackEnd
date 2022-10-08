@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200/")
+@CrossOrigin(origins="*")
 public class Controller {
         //Injeccion de los servicios
     @Autowired
@@ -251,13 +251,13 @@ public class Controller {
     
     //-------------------Controladores para persona---------------------
     @PostMapping("persona/crear")
-    public void crearPersona(@RequestBody Persona pro){
-        perSer.crearPersona(pro);
+    public void crearPersona(@RequestBody Persona per){
+        perSer.crearPersona(per);
     }
     
     @PostMapping("persona/editar")
-    public void editarPersona(@RequestBody Persona pro){
-        perSer.editarPersona(pro);
+    public void editarPersona(@RequestBody Persona per){
+        perSer.editarPersona(per);
     }
     
     @GetMapping("persona/buscar/{id}")
