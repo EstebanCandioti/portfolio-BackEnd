@@ -9,4 +9,6 @@ El proyecto de SpringBoot que contiene el codigo de la APIRest y el BackEnd del 
 
 El diagrama de clases UML (UML clases portfolio) esta dentro de la carpeta Logica BackEnd 
 
-
+El portfolio tiene 2 problemas:
+  1: tarda aprox 30-45 segundos en cargar aunque sea la primera vez.
+  2: la primera vez que se envia un formulario en un componente puede ser que no se envie correctamente por un error que aun desconozco y los cambios no seas realizados, despues del primer intento funciona correctamente hasta ahora
