@@ -5,3 +5,4 @@ Los diagramas DER (Archivo llamado DER DataBase Portfolio) , archivo sql con el 
 
 El proyecto de SpringBoot que contiene el codigo de la APIRest y el BackEnd del portfolio (Carpeta llamada portfolio) se encuentra en la carpeta Logica BackEnd
 
+El diagrama de clases UML (UML clases portfolio) esta dentro de la carpeta Logica BackEnd 
